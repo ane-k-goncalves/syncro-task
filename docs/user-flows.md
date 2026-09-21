@@ -1,43 +1,49 @@
-# 🗺️ Jornadas de Usuário
+# Jornadas de Usuário
 
-**Projeto:** [nome]
-**Versão:** 0.0.0 · esqueleto — preencha via `/utf-flows`
-**Última atualização:** [data]
+**Projeto:** Gerenciador de Projetos e Atividades
+**Versão:** 1.0.0
+**Última atualização:** 2026-09-20
 
-> 🤖 **Este documento é a fonte da verdade sobre O QUE A PESSOA VIVE na tela** —
-> o caminho do primeiro clique até o objetivo, e principalmente os pontos onde ela
-> trava, espera ou desiste.
->
-> ✍️ **Não preencha na mão:** rode `/utf-flows`. A entrevista escolhe a história que
-> merece o desenho, obriga o ponto de desistência a aparecer e cobra a decisão sobre
-> ele.
->
-> 🚫 **Não duplique:** regra de negócio mora no `prd.md`; estado, entidade e contrato
-> moram no `architecture.md`. Aqui mora o caminho.
+> Este documento descreve o caminho que a pessoa percorre na tela e os pontos
+> onde ela trava, espera ou desiste. Regras de negócio permanecem no `prd.md`;
+> estados, entidades e contratos pertencem ao `architecture.md`.
 
----
+## Jornada 1 — Compra do plano avançado
 
-## Jornada 1 — [nome da história]
-
-**Story:** USnn
-**Critérios que ela marca:** [sai do site e volta · depende do tempo · depende de outra pessoa · pode ser abandonada]
+**Story:** US07
+**Critérios que ela marca:** sai do site e volta; depende do tempo; depende de outra pessoa agir; pode ser abandonada.
 
 ```mermaid
 flowchart TD
-    A(["início"]) --> B{"decisão do sistema"}
-    B -->|"sim"| C["«pessoa» faz algo"]
-    B -->|"não"| X1[["Some — e daí?"]]
+    A(["Usuário acessa o projeto"]) --> B["«pessoa» escolhe o plano avançado"]
+    B --> C["Servidor cria pedido de R$ 14,99"]
+    C --> D(["Checkout do Mercado Pago"])
+    D --> E{"O que aconteceu?"}
+    E -->|"Pagamento aprovado"| F["Webhook assinado recebido"]
+    F --> G["Sistema consulta e confirma o pagamento"]
+    G --> H(["Plano e métricas liberados"])
+    E -->|"Pagamento pendente"| I["Pedido permanece pendente por até 15 minutos"]
+    I --> J{"Usuário retorna antes do prazo?"}
+    J -->|"sim"| K["Sistema consulta o status real no Mercado Pago"]
+    K --> E
+    J -->|"não"| L(["Pedido finalizado"])
+    I --> M{"Usuário escolhe uma ação"}
+    M -->|"continuar"| D
+    M -->|"cancelar"| L
+    E -->|"Pagamento recusado"| N["«pessoa» tenta pagar novamente"]
+    N --> D
+    D --> X1[["Usuário fecha a aba"]]
 
     style X1 fill:#ffe0e0,stroke:#c62828
 ```
 
 **O que decidimos sobre o nó vermelho:**
 
-[Um parágrafo, com as palavras do aluno. O que o sistema faz quando a pessoa some ali?
-É este parágrafo que transforma o desenho em decisão de projeto — e é ele que o
-professor pede para explicar na defesa.]
-
----
+Se o usuário fechar a aba ou abandonar o checkout, o pedido permanecerá pendente
+por até 15 minutos. Durante esse período, ele poderá consultar o status real no
+Mercado Pago, continuar o pagamento ou cancelar o pedido. Se não houver conclusão
+nesse prazo, o pedido será finalizado sem liberar o plano. Um pagamento só será
+considerado aprovado após a confirmação por webhook assinado do Mercado Pago.
 
 ## Dúvidas em aberto
 
