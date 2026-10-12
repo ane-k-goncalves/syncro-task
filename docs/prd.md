@@ -46,7 +46,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 > Toda story nasce `Draft`; só o aluno a promove para `Ready`. `Live` significa
 > que o Pull Request da história foi mesclado.
 
-### US01 — Criar conta · `Must Have` · `S` · Status: `⚪ Draft`
+### US01 — Criar conta · `Must Have` · `S` · Status: `Ready`
 
 **Como** usuário, **eu quero** criar uma conta informando nome, e-mail e senha,
 **para que** eu possa acessar a aplicação e organizar meus projetos e atividades.
@@ -59,7 +59,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN01, RN02, RN03
 
-### US02 — Criar projeto · `Must Have` · `S` · Status: `⚪ Draft`
+### US02 — Criar projeto · `Must Have` · `S` · Status: `Ready`
 
 **Como** usuário dono, **eu quero** criar um projeto informando um nome,
 **para que** eu possa reunir e organizar minhas atividades.
@@ -72,7 +72,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN04, RN05
 
-### US03 — Criar quadro Kanban automaticamente · `Must Have` · `S` · Status: `⚪ Draft`
+### US03 — Criar quadro Kanban automaticamente · `Must Have` · `S` · Status: `Ready`
 
 **Como** usuário dono, **eu quero** que um quadro Kanban seja criado automaticamente ao criar um projeto, **para que** eu possa organizar as atividades desde o início.
 
@@ -84,7 +84,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN05
 
-### US04 — Criar atividade · `Should Have` · `L` · Status: `⚪ Draft`
+### US04 — Criar atividade · `Should Have` · `L` · Status: `Ready`
 
 **Como** usuário dono ou colaborador, **eu quero** criar uma atividade dentro de um projeto, informando título, descrição, prazo e responsável, **para que** eu possa organizar o trabalho do projeto.
 
@@ -97,7 +97,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN06, RN07, RN08
 
-### US05 — Visualizar projetos · `Must Have` · `S` · Status: `⚪ Draft`
+### US05 — Visualizar projetos · `Must Have` · `S` · Status: `Ready`
 
 **Como** usuário autenticado, **eu quero** visualizar os projetos dos quais sou dono, colaborador ou convidado, **para que** eu possa acessar rapidamente os projetos que acompanho.
 
@@ -109,7 +109,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN03, RN19
 
-### US06 — Gerenciar projeto · `Should Have` · `M` · Status: `⚪ Draft`
+### US06 — Gerenciar projeto · `Should Have` · `M` · Status: `Ready`
 
 **Como** usuário dono, **eu quero** editar ou excluir meus projetos, **para que** eu possa manter meus projetos atualizados ou remover os que não utilizo mais.
 
@@ -122,7 +122,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN01, RN10
 
-### US07 — Comprar plano com recursos avançados · `Must Have` · `L` · Status: `⚪ Draft`
+### US07 — Comprar plano com recursos avançados · `Must Have` · `L` · Status: `Ready`
 
 **Como** usuário autenticado, **eu quero** comprar o plano de recursos avançados por R$ 14,99, **para que** eu possa acessar as métricas do projeto.
 
@@ -137,7 +137,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN13, RN14, RN15, RN16
 
-### US08 — Gerenciar permissões · `Must Have` · `M` · Status: `⚪ Draft`
+### US08 — Gerenciar permissões · `Must Have` · `M` · Status: `Ready`
 
 **Como** usuário dono, **eu quero** alterar o papel ou remover o acesso de pessoas do projeto, **para que** eu possa controlar quem pode colaborar ou apenas visualizar.
 
@@ -150,7 +150,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN02, RN03
 
-### US09 — Atualizar status da atividade · `Must Have` · `M` · Status: `⚪ Draft`
+### US09 — Atualizar status da atividade · `Must Have` · `M` · Status: `Ready`
 
 **Como** usuário dono ou colaborador, **eu quero** mover uma atividade entre as colunas do Kanban, **para que** eu possa acompanhar seu progresso.
 
@@ -163,7 +163,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN08, RN09, RN18
 
-### US10 — Convidar participante · `Must Have` · `M` · Status: `⚪ Draft`
+### US10 — Convidar participante · `Must Have` · `M` · Status: `Ready`
 
 **Como** usuário dono, **eu quero** convidar uma pessoa por e-mail e escolher entre colaborador ou convidado, **para que** eu possa permitir sua participação no projeto.
 
@@ -177,7 +177,7 @@ visualizar as atividades por status no Kanban, identificar pendências e atrasos
 
 **Regras relacionadas:** RN02, RN03, RN11, RN12
 
-### US11 — Visualizar métricas do projeto · `Must Have` · `M` · Status: `⚪ Draft`
+### US11 — Visualizar métricas do projeto · `Must Have` · `M` · Status: `Ready`
 
 **Como** usuário com o plano avançado aprovado, **eu quero** visualizar métricas do meu projeto, **para que** eu possa acompanhar seu progresso.
 

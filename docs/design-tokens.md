@@ -2,7 +2,7 @@
 
 **Projeto:** Gerenciador de Projetos e Atividades
 **Versão:** 1.0.0
-**Última atualização:** 2026-09-20
+**Última atualização:** 2026-10-12
 
 > Este documento define os papéis visuais mínimos para manter consistência entre
 > as telas do produto.
@@ -51,7 +51,7 @@
 
 ## Protótipo
 
-**Link:** Pendente — ainda não existe protótipo em Figma, Stitch ou ferramenta equivalente.
+**Link:** https://stitch.withgoogle.com/projects/12906018690749491179?pli=1
 
 **Telas previstas:**
 
